@@ -14,6 +14,7 @@ export class SerieService {
   constructor(private http: HttpClient) { }
 
   getSeries(): Observable<Serie[]>{
+
     return this.http.get<Serie[]>(this.infoUrl);
   }
 }

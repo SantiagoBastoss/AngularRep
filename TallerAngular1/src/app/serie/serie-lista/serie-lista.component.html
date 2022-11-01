@@ -1,10 +1,30 @@
-<p>
-  serie-lista works!
-</p>
+<h1 style="text-align: center;">Información series</h1>
+
 <div class="container-fluid">
-  <div class="row">
-      <div class="col mb-2" *ngFor="let serie of series">
-        {{serie.nombre}}
-      </div>
+  <div class = "row">
+    <div class="col-7">
+        <table class="table table-striped table-bordered" style="text-align: center;">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Canal</th>
+                    <th scope="col">Temporadas</th>
+                </tr>
+            </thead>
+            <tbody id="series">
+              <tr *ngFor="let serie of series">
+
+                <td>{{serie.id}}</td>
+                <td>{{serie.name}}</td>
+                <td>{{serie.channel}}</td>
+                <td>{{serie.seasons}}</td>
+                
+              </tr>
+            </tbody>
+       </table> 
+       <p>El promedio es: {{promedio}}</p> 
+    </div>
   </div>
 </div>
+
